@@ -23,3 +23,24 @@ TS - Category filters: TC - Address in maps filter verification
 | 3. Choose filterName | filterName = Mapy | You should be redirected to google maps with Prowly as a searched phrase |
 | 4. Verify address is correct prowlyAddress | prowlyAddress = Antoniego Józefa Madalińskiego 71/1 | Prowly address should be displayed correctly |
 | 5. Verify the google pin is pinned in the right place | prowlyAddress = Antoniego Józefa Madalińskiego 71/1 | Google pin should be placed at prowlyAddress |
+
+TS - Time filters: TC - End date before start date 
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Click on filterName | filterName = Narzędzia | A submenu with new types of filters should be displayed |
+| 4. Click on filter by date and choose filterType | filterType = Zakres dat... | A dialog window with a calendar filter should be displayed |
+| 5. Set startDate and endDate | startDate = today, endDate = today - two days  | An error message should appear as end date cannot be set before start date |
+
+TS - Time filters: TC - Dates from the past century
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Click on filterName | filterName = Narzędzia | A submenu with new types of filters should be displayed |
+| 4. Click on filter by date and choose filterType | filterType = Zakres dat... | A dialog window with a calendar filter should be displayed |
+| 5. Set startDate and endDate | startDate = 02.04.1920, endDate = 04.04.1920 | Nothing is displayed as prowly wasn't a thing in 1920 |
+
+TS - Time filters: TC - Dates as non-numeric strings 
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Click on filterName | filterName = Narzędzia | A submenu with new types of filters should be displayed |
+| 4. Click on filter by date and choose filterType | filterType = Zakres dat... | A dialog window with a calendar filter should be displayed |
+| 5. Set startDate and endDate | startDate = iLikeChocolate, endDate = andMarshmallows | An error message should appear as startDate and endDate aren't dates |
