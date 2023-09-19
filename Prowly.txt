@@ -1,0 +1,25 @@
+All test cases will be written in the following manner:
+
+| TEST STEPS | TEST DATA | EXPECTED RESULT |
+
+
+TS - Category filters: TC - First result verification
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Verify companyName and company logo on Google sidebar | companyName = Prowly  | Company name is correctly spelled and logo is displayed |
+| 4. Verify if the first result has firstResultUrl and the four results in the sublist are firstResult, secondResult, thirdResult, fourthResult  | firstResultUrl = https://www.prowly.com, firstResult = Pricing, secondResult = Pitch The Media, thirdResult = Wysyłka do Mediów, fourthResult = Find Relevant Journalists | First search result has correct url and all four subresults are displayed correctly |
+
+TS - Category filters: TC - Logo in Graphic filter verification
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Choose filterName | filterName = Grafika | Only graphical results should be displayed |
+| 4. Verify first result is the Prowly logo | - | Prowly Owl should be displayed as first result |
+| 5. Click on filterName | filterName = Narzędzia | A submenu with types of filters should be displayed |
+| 6. Click on filter by type and choose filterType  | filterType = GIF | Prowly Sezon 3 with it's gif should be displayed as first result. filterType should be displayed among filters |
+
+TS - Category filters: TC - Address in maps filter verification
+| 1. Navigate to Google homepage | - | Google homepage is loaded |
+| 2. Type searchedText into Google search field and click search button | searchedText = prowly | A list of search results is displayed |
+| 3. Choose filterName | filterName = Mapy | You should be redirected to google maps with Prowly as a searched phrase |
+| 4. Verify address is correct prowlyAddress | prowlyAddress = Antoniego Józefa Madalińskiego 71/1 | Prowly address should be displayed correctly |
+| 5. Verify the google pin is pinned in the right place | prowlyAddress = Antoniego Józefa Madalińskiego 71/1 | Google pin should be placed at prowlyAddress |
